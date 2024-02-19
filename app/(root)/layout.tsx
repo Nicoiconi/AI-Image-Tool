@@ -1,5 +1,6 @@
-import MobileNav from "@/components/share/MobileNav/MobileNav";
-import SideBar from "@/components/share/SideBar/SideBar";
+import MobileNav from "@/components/shared/MobileNav/MobileNav";
+import SideBar from "@/components/shared/SideBar/SideBar";
+import { Toaster } from "@/components/ui/toaster";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -12,6 +13,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           {children}
         </div>
       </div>
+
+      <Toaster />
     </main>
   )
 }
