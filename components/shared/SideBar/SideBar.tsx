@@ -13,13 +13,21 @@ export default function SideBar() {
   return (
     <aside className="sidebar">
       <div className="flex size-full flex-col gap-4">
-        <Link href="/" className="sidebar-logo">
-          <Image
+        <Link href="/" className="flex flex-col items-center">
+          {/* <Image
             src="/assets/images/logo-text.svg"
             alt="Logo"
             width={180}
             height={28}
-          />
+          /> */}
+          <div className="text-indigo-700">
+            <div className="text-[26px] font-bold">
+              AI-Image-Editor
+            </div>
+            <div className="text-[21px]">
+              AI tool to edit images
+            </div>
+          </div>
         </Link>
 
         <nav className="sidebar-nav">
