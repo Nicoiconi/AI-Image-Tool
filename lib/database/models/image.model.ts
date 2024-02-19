@@ -22,43 +22,22 @@ export interface IImage extends Document {
 }
 
 const ImageSchema = new Schema({
-  title: {
-    type: String,
-    required: true
-  },
-  transformation: {
-    type: String,
-    required: true
-  },
-  publicId: {
-    type: String,
-    required: true
-  },
-  secureUrl: {
-    type: String,
-    required: true
-  },
-  width: Number,
-  height: Number,
-  config: Object,
-  transformationUrl: URL,
-  aspectRatio: String,
-  color: String,
-  prompt: String,
-  author: {
-    type: Schema.Types.ObjectId,
-    ref: "User"
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  },
-  updatedAt: {
-    type: Date,
-    default: Date.now
-  }
-})
+  title: { type: String, required: true },
+  transformationType: { type: String, required: true },
+  publicId: { type: String, required: true },
+  secureURL: { type: String, required: true },
+  width: { type: Number },
+  height: { type: Number },
+  config: { type: Object },
+  transformationUrl: { type: String },
+  aspectRatio: { type: String },
+  color: { type: String },
+  prompt: { type: String },
+  author: { type: Schema.Types.ObjectId, ref: 'User' },
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now }
+});
 
-const Image = models?.Image || model("Image", ImageSchema)
+const Image = models?.Image || model('Image', ImageSchema);
 
-export default Image
+export default Image;
